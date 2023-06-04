@@ -1,5 +1,6 @@
 # Confidential
 The software encrypts your data and turns your storage space into a vault.
+The software is in development(v0).
 
 ## App Design
 	Encryption algorythm: XChaCha20-Poly1305
