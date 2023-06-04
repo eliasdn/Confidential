@@ -1,0 +1,42 @@
+Encryption algorythm: x ChaCha20Poly1305
+programation laguage: c++, Qt
+storage : sqlite
+
+Steps:
+    Step 1: Main page: Register(button) or login(button)
+    Step 2a: Register(page): set username(dbName) and a password(used to encrypt the .db file)
+    Step 2b: Login(page): input your username and your password(used to decrypt the .db file)
+    Step 3: Select your disk drive/usb
+    Step 4: Show all folders of the usb -> Select one Folders/file Crypt or decrypt it
+
+Function:
+	register() : create db file  
+
+storage design:
+
+    Storage:/
+    ├── Vault/
+    │   ├── EncryptFolderA/
+    │   │   └── FileA/
+    │   ├── EncryptFolderB/
+    │   │   └── FileA/
+    │   └── EncryptFolderC/
+    │       └── FileA/
+    ├── Databases/
+    │   └── username.db/
+    ├── Confidential.exe(Windows bin)
+    ├── Confidential(Linux bin)
+    └── Confidential(Mac bin)
+     
+
+When the first account is registred $username.db file is created in the folder "Databases"
+In $username.db they are:
+    files(table):
+        ┌────────────────┬─────────────┐
+		│      File      │ PrivateKey  │
+		├────────────────┼─────────────┤
+		│ FolderA/FilesA │ PrivateKeyX │
+		│ FolderB/FilesA │ PrivateKeyY │
+		│ FolderB/FilesB │ PrivateKeyZ │
+		└────────────────┴─────────────┘
+		
