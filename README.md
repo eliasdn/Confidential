@@ -33,12 +33,12 @@ storage : sqlite
 		├── Confidential.exe(Windows bin)
 		├── Confidential(Linux bin)
 		└── Confidential(Mac bin)
-     
-
+		
 When the first account is registred $username.db file is created in the folder "Databases"
+
 In $username.db they are:
     files(table):
-    ┌────────────────┬─────────────┐
+    		┌────────────────┬─────────────┐
 		│      File      │ PrivateKey  │
 		├────────────────┼─────────────┤
 		│ FolderA/FilesA │ PrivateKeyX │
